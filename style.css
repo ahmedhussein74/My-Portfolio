@@ -1,0 +1,355 @@
+body{
+    background: linear-gradient(red, transparent),
+                linear-gradient(to top left, lime, transparent),
+                linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen;
+    background-attachment: fixed;
+}
+nav{
+    width: 75%;
+    height: 50px;
+}
+nav header{
+    place-items: center;
+    font-size: 20px;
+    width: 25%;
+}
+.fa-bars{
+    display: none;
+}
+nav aside{
+    width: 75%;
+    display: flex;
+}
+nav i{
+    color: #fff;
+    font-size: 1.5rem;
+    
+}
+nav aside{
+    height: 100%;
+}
+nav aside a{
+    width: calc(100% / 5);
+    height: 100%;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+nav aside a:hover{
+    background: #ffc107;
+    color: #fff;
+}
+.my-bg{
+    background-image: url("./img/bg.jpg");
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+section{
+    width: 75%;
+    height: calc(100vh - 90px);
+    background-color: #eee;
+}
+section p{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    padding-left: 20px;
+}
+section div{
+    height: 55px;
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+#btn-back-to-top {
+    position: fixed;
+    bottom: 5%;
+    right: 2.5%;
+    display: none;
+}
+
+/* projects */
+.project{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 280px);
+    gap: 25px;
+    justify-content: center;
+    height: fit-content;
+}
+.project section{
+    width: 200px;
+    height: 250px;
+}
+.project section div img{
+    object-fit: cover;
+    transition: 1s all ease-in-out;
+    width: 75%;
+    height: 75%;
+}
+.project section div{
+    height: 80%;
+    background-color: #212529;
+    display: grid;
+    place-items: center;
+}
+.project section img:hover {
+    transform: scale(1.3) rotate(15deg);
+}
+.project section span{
+    height: 20%;
+    place-items: center;
+    font-size: 25px;
+}
+
+/* contact */
+.contact{
+    height: 500px;
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(2, 200px);
+    gap: 30px;
+    justify-content: center;
+}
+.contact section{
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.contact section img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+.contact span{
+    width: 100%;
+    height: 50px;
+    display: grid;
+    place-items: center;
+}
+.contact a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* skills */
+.skills{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,135px);
+    grid-template-rows: repeat(4, 46px);
+    gap: 25px;
+    justify-content: center;
+    height: 350px;
+}
+.skills span{
+    background-color: #0d6efd;
+    font-size: 20px;
+    color: #fff;
+    height: 46px;
+}
+
+/* personal */
+.myinfo{
+    display: grid;
+    grid-template-columns: repeat(4,190px);
+    gap: 10px 10px;
+    margin-top: 50px;
+    justify-content: center;
+    height: 250px;
+}
+.myinfo section{
+    width: 190px;
+    height: 220px;
+}
+.top img{
+    width: 50px;
+    height: 50px;
+}
+.bottom{
+    background-color: #212529;
+    color: #fff;
+}
+.bottom p{
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 15px;
+    padding-left: 5px;
+}
+
+
+@media screen and (max-width:768px) 
+{
+    nav{
+        width: 90%;
+    }
+    nav i{
+        font-size: 1rem;
+    }
+    section{
+        width: 90%;
+    }
+    section div{
+        font-size: 20px;
+    }
+    .welcome{
+        font-size: 18px;
+        padding-left: 8px;
+    }
+    .my-bg{
+        background-image: url("./img/sm-bg.jpg");
+    }
+    nav{
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+    nav header{
+        width: 100%;
+        font-size: 18px;
+    }
+    .fa-bars{
+        display: block;
+        font-size: 1.2rem;
+    }
+    nav aside{
+        display: none;
+        width: 50%;
+        height: fit-content;
+        flex-wrap: wrap;
+        background-color: #212529;
+        margin-top: 5px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    nav aside a{
+        width: 100%;
+        height: 30px;
+        padding: 3px;
+        font-size: 15px;
+        font-weight: normal;
+    }
+}
+
+
+/* skills */
+@media screen and (max-width:550px) 
+{
+    .skills{
+        display: grid;
+        grid-template-columns: repeat(2,120px);
+        gap: 10px;
+        margin-top: 20px;
+        height: 360px;
+    }
+    .skills span{
+        height: fit-content;
+        font-size: 15px;
+    }
+}
+
+
+/* info */
+@media screen and (max-width:500px)
+{
+    .myinfo{
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: fit-content;
+    }
+    .myinfo section{
+        width: 170px;
+        height: 200px;
+    }
+    .top img{
+        width: 30px;
+        height: 30px;
+    }
+    .bottom p{
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+}
+/* info */
+@media screen and (max-width:990px) and (min-width:501px)
+{
+    .myinfo{
+        grid-template-columns: repeat(2,150px);
+    }
+    .top img{
+        width: 35px;
+        height: 35px;
+    }
+    .bottom p{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+}
+
+
+/* contact */
+@media screen and (max-width:425px) 
+{
+    #btn-back-to-top{
+        width: 40px;
+        height: 40px;
+        padding: 0;
+    }
+    .contact{
+        height: 500px;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .contact section{
+        width: 100px;
+        height: 100px;
+    }
+    .contact section img{
+        width: 50px;
+        height: 50px;
+    }
+    .contact span{
+        height: 40px;
+    }
+    .contact a{
+        text-decoration: none;
+        font-size: 15px;
+    }
+    section div{
+        height: 45px;
+    }
+}
+
+
+/* projects */
+@media screen and (max-width:425px) 
+{
+    .project{
+        grid-template-columns: repeat(2, 130px);
+        grid-template-rows: repeat(3, 180px);
+        gap: 15px;
+        height: 590px;
+        margin-top: 5px;
+    }
+    .project section{
+        width: 130px;
+        height: 180px;
+    }
+    .project section span{
+        font-size: 18px;
+    }
+}
